@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es2015", "dom"]
+  },
+  "include": ["src"]
+}

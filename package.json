@@ -1,0 +1,23 @@
+{
+  "name": "pluralsight-sample-react-testing-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^16.8.24",
+    "@types/react-dom": "^16.8.5",
+    "parcel-bundler": "^1.12.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "sass": "^1.22.9"
+  }
+}
