@@ -5,7 +5,7 @@ export interface Props {
   onUsernameChange: (username: string) => void;
   onPasswordChange: (password: string) => void;
   onRememberChange: (remember: boolean) => void;
-  onSubmit: (username: string, password: string) => void;
+  onSubmit: (username: string, password: string, remember: boolean) => void;
 }
 
 function LoginForm(props: Props) {
@@ -33,7 +33,7 @@ function LoginForm(props: Props) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    props.onSubmit(username, password);
+    props.onSubmit(username, password, remember);
   };
 
   return (
@@ -41,6 +41,7 @@ function LoginForm(props: Props) {
       <label htmlFor="username">Username:</label>
       <input
         type="text"
+        data-testid="username"
         name="username"
         value={username}
         onChange={handleUsernameChange}
@@ -49,6 +50,7 @@ function LoginForm(props: Props) {
       <label htmlFor="password">Password:</label>
       <input
         type="password"
+        data-testid="password"
         name="password"
         value={password}
         onChange={handlePasswordChange}
@@ -56,6 +58,7 @@ function LoginForm(props: Props) {
 
       <label>
         <input
+          data-testid="remember"
           name="remember"
           type="checkbox"
           checked={remember}
