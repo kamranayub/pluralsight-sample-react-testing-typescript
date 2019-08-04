@@ -37,7 +37,7 @@ describe("<LoginForm />", () => {
 
   test("should allow entering a username", async () => {
     const onUsernameChange = jest.fn();
-    const { findByTestId } = renderLoginForm({ onUsernameChange });
+    const { findByTestId, debug } = renderLoginForm({ onUsernameChange });
     const username = await findByTestId("username");
 
     fireEvent.change(username, { target: { value: "test" } });
@@ -81,10 +81,12 @@ describe("<LoginForm />", () => {
     const username = await findByTestId("username");
     const password = await findByTestId("password");
     const remember = await findByTestId("remember");
+    const submit = await findByTestId("submit");
 
     fireEvent.change(username, { target: { value: "test" } });
-    fireEvent.change(password, { target: { value: "password " } });
+    fireEvent.change(password, { target: { value: "password" } });
     fireEvent.click(remember);
+    fireEvent.click(submit);
 
     expect(onSubmit).toHaveBeenCalledWith("test", "password", true);
   });

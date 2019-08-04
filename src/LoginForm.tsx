@@ -40,8 +40,8 @@ function LoginForm(props: Props) {
     <form data-testid="login-form" onSubmit={handleSubmit}>
       <label htmlFor="username">Username:</label>
       <input
-        type="text"
         data-testid="username"
+        type="text"
         name="username"
         value={username}
         onChange={handleUsernameChange}
@@ -49,8 +49,8 @@ function LoginForm(props: Props) {
 
       <label htmlFor="password">Password:</label>
       <input
-        type="password"
         data-testid="password"
+        type="password"
         name="password"
         value={password}
         onChange={handlePasswordChange}
