@@ -48,9 +48,9 @@ describe("<LoginForm />", () => {
   test("should allow entering a password", async () => {
     const onPasswordChange = jest.fn();
     const { findByTestId } = renderLoginForm({ onPasswordChange });
-    const username = await findByTestId("password");
+    const password = await findByTestId("password");
 
-    fireEvent.change(username, { target: { value: "password" } });
+    fireEvent.change(password, { target: { value: "password" } });
 
     expect(onPasswordChange).toHaveBeenCalledWith("password");
   });
